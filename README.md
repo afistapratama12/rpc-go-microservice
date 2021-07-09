@@ -1,8 +1,6 @@
 # RPC GOLANG MICROSERVICE
 
 ## Tech Stack
-
-## microservice
 - gRPC
 - rabbitMQ
 - redis
