@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package model;
+
+option go_package = ".;model";
+
+message User {
+    int32 id =1;
+    string name=2;
+    string email=3;
+    string password=4;
+}
+
+message UserFormat {
+    int32 id=1;
+    string name=2;
+    string email=3;
+    string access_token=4;
+}
+
+
+message UserInput {
+    string name=1;
+    string email=2;
+    string password=3;
+}
+
+
+message UserLogin {
+    string email=1;
+    string password=2;
+}
+
+service Users{
+    rpc Register(UserInput) returns (UserFormat) {} 
+    rpc Login(UserLogin) returns (UserFormat) {} 
+}
+
+
